@@ -1,82 +1,25 @@
-*,
-*::before,
-*::after
-{
-  box-sizing: border-box;
+/* componente.component.css */
+
+/* Estilo para el contenedor de cada encabezado y espacio a llenar */
+.item-container {
+  margin-bottom: 20px; /* Espacio entre cada conjunto de encabezado y espacio */
+  display: flex; /* Usar flexbox */
+  flex-wrap: wrap; /* Envolver elementos a la siguiente fila si no caben */
 }
 
-*
-{
-  margin: 0;
-  padding: 0;
+/* Estilo para cada div que contiene un campo de texto */
+.item-container div {
+  flex: 1; /* Que cada div tome igual espacio en la fila */
+  margin-right: 5px; /* Espacio entre cada campo de texto */
 }
 
-main
-{
-  height: 100vh;
-  overflow-x: hidden;
-  overflow-y: auto;
-  perspective: 2px;
+/* Estilo para el botón "Eliminar" */
+button {
+  margin-top: 10px; /* Espacio entre los campos de texto y el botón */
 }
 
-section
-{
-  transform-style: preserve-3d;
-  position: relative;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #FFF;
-}
-
-section h1
-{
-  text-align: center;
-  font-size: 4rem;
-  font-family: sans-serif;
-}
-
-.no-parallax
-{
-  background-color: #5333ed;
-  z-index: 999;
-}
-
-.parallax h1
-{
-  width: 60%;
-  font-size: 2rem;
-}
-
-.parallax::after
-{
-  content: " ";
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  transform: translateZ(-1px) scale(1.5);
-  background-size: 100%;
-  z-index: -1;
-}
-
-.bg::after
-{
-  background: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url(https://img.freepik.com/premium-photo/long-shot-man-exploring-nature_23-2149884252.jpg?w=740);
-  background-size: cover;
-}
-
-@media screen and (min-width: 768px)
-{
-  section h1
-  {
-    font-size: 8rem;
-  }
-
-  .parallax h1
-  {
-    font-size: 4rem;
-  }
+/* Estilo para el botón "Añadir" y "Guardar" */
+.add-button,
+.save-button {
+  margin-top: 20px; /* Espacio entre los conjuntos de encabezado y espacio */
 }
