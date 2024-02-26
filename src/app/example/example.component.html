@@ -1,0 +1,31 @@
+<form [formGroup]="formulario" (ngSubmit)="guardarDatos()" >
+  <div formArrayName="items" class="row">
+    <div *ngFor="let item of itemsFormArray.controls; let i = index" [formGroupName]="i">
+      <h3># {{i + 1}}</h3>
+      <div class="col-md-2">
+        <label for="nombre{{i}}">Nombre:</label>
+        <input id="nombre{{i}}" formControlName="Nombre" type="text" placeholder="Nombre"/>
+      </div>
+      <div class="col-md-2">
+        <label for="presentacion{{i}}">Presentación:</label>
+        <input id="presentacion{{i}}" formControlName="Presentacion" type="text" placeholder="Presentación"/>
+      </div>
+      <div class="col-md-2">
+        <label for="cantidad{{i}}">Cantidad:</label>
+        <input id="cantidad{{i}}" formControlName="Cantidad" type="text" placeholder="Cantidad"/>
+      </div>
+      <div class="col-md-2">
+        <label for="posologia{{i}}">Posología:</label>
+        <input id="posologia{{i}}" formControlName="Posologia" type="text" placeholder="Posología"/>
+      </div>
+      <div class="col-md-2">
+        <label for="duracion{{i}}">Duración:</label>
+        <input id="duracion{{i}}" formControlName="Duracion" type="text" placeholder="Duración"/>
+      </div>
+      <button type="button" (click)="eliminarItem(i)">Eliminar</button>
+    </div>
+  </div>
+
+  <button type="button" (click)="agregarItem()">Añadir</button>
+  <button type="submit">Guardar</button>
+</form>

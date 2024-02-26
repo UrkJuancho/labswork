@@ -1,26 +1,56 @@
-<div *ngFor="let item of items; let i = index" class="item-container">
-  <h3>Encabezado {{i + 1}}</h3>
-  <div class="input-container">
+<div *ngFor="let item of items; let i = index" class="item-container row">
+  <h3># {{i + 1}}</h3>
+  <div class="input-container col-md-2">
     <label class="label">Nombre:</label>
     <input type="text" [(ngModel)]="item.Nombre" class="input-field" placeholder="Nombre"/>
   </div>
-  <div class="input-container">
+  <div class="input-container col-md-2">
     <label class="label">Presentación:</label>
     <input type="text" [(ngModel)]="item.Presentacion" class="input-field" placeholder="Presentación"/>
   </div>
-  <div class="input-container">
+  <div class="input-container col-md-2">
     <label class="label">Cantidad:</label>
     <input type="text" [(ngModel)]="item.Cantidad" class="input-field" placeholder="Cantidad"/>
   </div>
-  <div class="input-container">
+  <div class="input-container col-md-2">
     <label class="label">Posología:</label>
     <input type="text" [(ngModel)]="item.Posologia" class="input-field" placeholder="Posología"/>
   </div>
-  <div class="input-container">
+  <div class="input-container col-md-2">
     <label class="label">Duración:</label>
     <input type="text" [(ngModel)]="item.Duracion" class="input-field" placeholder="Duración"/>
   </div>
   <button (click)="eliminarItem(i)">Eliminar</button>
+  <button (click)="agregarItem()">Añadir</button>
+  <button (click)="guardarDatos()">Guardar</button>
 </div>
-<button (click)="agregarItem()">Añadir</button>
-<button (click)="guardarDatos()">Guardar</button>
+
+<div *ngFor="let item of items; let i = index" class="item-container row">
+  <p># {{i + 1}}</p>
+  <div class="input-container col-md-2">
+    <label class="label">Nombre:</label>
+    <input type="text" [(ngModel)]="item.Nombre" class="input-field" placeholder="Nombre" />
+  </div>
+  <div class="input-container col-md-2">
+    <label class="label">Presentación:</label>
+    <input type="text" [(ngModel)]="item.Presentacion" class="input-field" placeholder="Presentación" />
+  </div>
+  <div class="input-container col-md-2">
+    <label class="label">Cantidad:</label>
+    <input type="text" [(ngModel)]="item.Cantidad" class="input-field" placeholder="Cantidad" />
+  </div>
+  <div class="input-container col-md-2">
+    <label class="label">Posología:</label>
+    <input type="text" [(ngModel)]="item.Posologia" class="input-field" placeholder="Posología" />
+  </div>
+  <div class="input-container col-md-2">
+    <label class="label">Duración:</label>
+    <input type="text" [(ngModel)]="item.Duracion" class="input-field" placeholder="Duración" />
+  </div>
+  <button (click)="eliminarItem(i)">Eliminar</button>
+  <button (click)="agregarItem()">Añadir</button>
+  <button (click)="guardarDatos()">Guardar</button>
+</div>
+
+<app-example></app-example>
+
