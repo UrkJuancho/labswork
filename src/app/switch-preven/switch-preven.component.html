@@ -1,0 +1,10 @@
+<div class="switch-container">
+  <div class="switch">
+    <label>{{ checked ? 'No' : '' }}</label>
+    <label class="switch">
+      <input type="checkbox" [checked]="checked" (change)="toggleSwitch()" [disabled]="disabled">
+      <span class="slider round"></span>
+    </label>
+    <label>{{ checked ? '' : 'Sí' }}</label>
+  </div>
+</div>
