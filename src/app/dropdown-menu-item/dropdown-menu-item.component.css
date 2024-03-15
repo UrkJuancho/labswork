@@ -1,0 +1,50 @@
+/* Alinea los botones y el menú desplegable a la derecha */
+.text-right {
+  text-align: right;
+}
+
+/* Estilo para los botones */
+.btn {
+  border-radius: 4px;
+  padding: 8px 12px;
+  font-size: 16px;
+}
+
+/* Estilo para el botón de Ver Registro Clinico */
+.btn-info {
+  background-color: #17a2b8;
+  color: #fff;
+  border: none;
+}
+
+/* Estilo para el botón de Exportar Certificado y su icono */
+.btn-danger {
+  background-color: #dc3545;
+  color: #fff;
+  border: none;
+}
+
+/* Estilo para el icono dentro del botón */
+.btn i {
+  font-size: 18px;
+}
+
+/* Estilo para el menú desplegable */
+.dropdown-menu {
+  min-width: 150px;
+  border-radius: 4px;
+  padding: 4px 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo para los elementos dentro del menú desplegable */
+.dropdown-item {
+  font-size: 14px;
+  color: #333;
+  padding: 8px 12px;
+}
+
+/* Estilo para los elementos del menú desplegable al ser hover */
+.dropdown-item:hover {
+  background-color: #f8f9fa;
+}
